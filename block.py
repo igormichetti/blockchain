@@ -20,4 +20,4 @@ class Block():
             self.hash.update(str(self).encode('utf-8'))
         
     def __str__(self):
-        return "{}{}{}{}".format(self.previous_hash.hexdigest(), self.data, self.nonce, self.timestamp)
+        return f"{self.previous_hash.hexdigest()}{self.data}{self.nonce}{self.timestamp}"
